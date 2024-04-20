@@ -1,0 +1,27 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Product from "./Product";
+
+function  ProductDetails() {
+    let{productID}=useParams();
+    // const api_url = "https://fakestoreapi.com/products";
+    // const params = useParams();
+    // const [product, setProduct] = useState({});
+    // console.log(params);
+
+    // useEffect(() => {
+    //     fetch(`${api_url}/${params.productId}`)
+    //         .then((res) => res.json())
+    //         .then((product) => setProduct(product));
+    // }, [params.productId]); // Include params.productId in the dependency array
+
+    return (
+        <>
+        <h1> ProductDetails # {productID}</h1>
+            {/* Render the Product component with the product prop */}
+            {/* <Product product={product} showButton={false} /> */}
+        </>
+    );
+}
+
+export default ProductDetails;
